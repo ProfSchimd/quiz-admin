@@ -1,4 +1,5 @@
 import { AppBar, Box, Drawer, Toolbar, Typography } from '@mui/material';
+import SwitchWrapper from './SwitchWrapper';
 
 export default function Admin(props) {
     const drawerWidth = props.drawerWidth ? props.drawerWidth : 300;
@@ -18,6 +19,7 @@ export default function Admin(props) {
                         }}>{t.name}
                     </Typography>
                     ))}
+                    <SwitchWrapper setDark={props.setDark} />
                 </Toolbar>
             </AppBar>
             <Box

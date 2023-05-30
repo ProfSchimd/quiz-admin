@@ -58,7 +58,7 @@ export default function Home() {
     <ThemeProvider theme={dark ? darkTheme: lightTheme}>
     <CssBaseline />
       <Admin 
-        darkMode={setDark}
+        setDark={setDark}
         menuItems={menuItems}
         main={mainContent()}
         side={sideContent()}
