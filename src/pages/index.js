@@ -3,7 +3,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Admin from '../components/Admin';
-import FileList from '@/components/FileList';
+import QuestionList from '@/components/QuestionList';
 import Details from '@/components/Details';
 
 const menuItems = [
@@ -40,15 +40,19 @@ const darkTheme = createTheme({
 function mainContent() {
   return(
     <Box>
-      <FileList />
-      <Details tags={['A', 'B']}/>
+      <Box sx={{width: "50%"}}>
+        
+        <QuestionList />
+        <Details />
+
+      </Box>
     </Box>
   );
 }
 
 function sideContent() {
   return(
-    <FileList />
+    <QuestionList />
   );
 }
 

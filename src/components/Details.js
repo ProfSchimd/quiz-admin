@@ -4,6 +4,7 @@ import { useState } from 'react';
 import WeightSlider from './WeightSlider';
 import Tags from './Tags';
 import TypeSelector from './TypeSelector';
+import { TextareaAutosize } from '@mui/material';
 
 export default function Details() {
     const [qid, setQid] = useState("001");
@@ -25,13 +26,15 @@ export default function Details() {
     }
 
     return (
-        <Stack>
-            <Stack spacing={2} direction="row" sx={{mb: 2}}>
+        <Stack spacing={2}>
+            <Stack spacing={2} direction="row">
                 <TextField size="small" label="ID" value={qid} onChange={handleChangeId}/>
                 <TypeSelector type={type} onChange={handleChange}/>
             </Stack>    
             <WeightSlider />
             <Tags tags={tags} onDeleteTag={handleDeleteTag} onAddTag={handleAddTag}/>
+            <TextField></TextField>
+            <TextField></TextField>
         </Stack>
     );
 }
